@@ -4,7 +4,7 @@ subtitle: Just in case you needed a few extra markdown patterns to remember.
 permalink: "/features/"
 ---
 
-In addition to basic markdown features like *emphasis,*, **strong text,** [links](http://example.com), and `inline code`, the tufte-markdown parser pays special attention to figures and footnotes. The official [Tufte-CSS site](https://edwardtufte.github.io/tufte-css/) explains the more advanced features in detail, but we're trying to poke and prod things a bit to eliminate some of the manual HTML entry that's still necessary.
+In addition to basic markdown features like *emphasis,* **strong text,** [links](http://example.com), and `inline code`, the tufte-markdown parser pays special attention to figures and footnotes. The official [Tufte-CSS site](https://edwardtufte.github.io/tufte-css/) explains the more advanced features in detail, but we're trying to poke and prod things a bit to eliminate some of the manual HTML entry that's still necessary.
 
 ## Sidenotes and Marginalia
 
