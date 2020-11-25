@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="{{ meta.lang }}">
+  <head>
+		{% include "head.njk" %}
+  </head>
+  <body>
+		<article>
+		<h1>{{ title | markdownInline | safe }}</h1>
+		{% if subtitle %}<p class="subtitle">{{ subtitle | markdownInline | safe }}</p>{% endif %}
+				{{ content | safe }}
+		</article>
+  </body>
+</html>

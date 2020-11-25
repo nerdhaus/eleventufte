@@ -1,0 +1,10 @@
+{
+  "title" : "Eleventufte",
+  "description": "An Edward Tufte flavored blogging template for Eleventy",
+  "url": "https://eleventufte.netlify.app",
+  "lang": "en",
+  "social": {
+    "twitter": "http://twitter.com/nerdhaus",
+    "github": "https://github.com/nerdhaus"
+  }
+}

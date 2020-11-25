@@ -1,0 +1,74 @@
+backend:
+  name: github
+  branch: staging
+  repo: nerdhaus/eleventufte
+
+site_url: "/"
+
+media_folder: 'src/uploads/' # Media files will be stored in the repo under src/uploads
+public_folder: '/uploads' # The src attribute for uploaded media will begin with /uploads
+
+# Please run "npx netlify-cms-proxy-server" for local backend
+local_backend: true
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    label_singular: "Page"
+    description: "Static pages for the site's navigation structure."
+    summary: "{{permalink}} — {{title}}"
+    format: "frontmatter"
+    folder: "src/pages"
+    create: true
+    sortable_fields: ["permalink", "title", "commit_date"]
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Permalink", name: "permalink", widget: "string", required: true }
+      - { label: "Hide from lists", name: "eleventyExcludeFromCollections", widget: "boolean", default: false, required: false }
+      - { label: "Description", name: "description", widget: "string", required: false, pattern: ['.{0,160}', "160 characters max"], hint: "Optional 160-char text used in listings and meta tags." }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "posts"
+    label: "Posts"
+    label_singular: "Post"
+    summary: "{{title}} — {{published}}"
+    format: "frontmatter"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    folder: "src/chats"
+    create: true
+    sortable_fields: ["title", "date", "author"]
+    view_groups:
+      - label: "Posted"
+        field: "date"
+        pattern: \d{4}
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true, pattern: ['.{0,60}', "60 characters max"], hint: "60 character limit; used in meta tags."  }
+      - { label: "Description", name: "description", widget: "string", required: false, pattern: ['.{0,160}', "160 characters max"], hint: "Optional 160-char text used in listings and meta tags." }
+      - { label: "Date published", name: "date", widget: "date", format: "YYYY-MM-DD", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "settings"
+    label: "Site Settings"
+    delete: false
+    files:
+
+      - name: "meta"
+        label: "Site meta"
+        description: "Meta tags, social links, and other settings used when building the site."
+        file: "src/_data/meta.json"
+        fields:
+        - { label: "Site name", name: "title", widget: "string", required: true, pattern: ['.{0,60}', "60 characters max"], hint: "60 character limit; used in site meta tags."  }
+        - { label: "Description", name: "description", widget: "string", required: false, pattern: ['.{0,160}', "160 characters max"], hint: "Optional 160-char text used in site meta tags." }
+        - { label: "Site URL", name: "url", widget: "string", required: true, hint: "Live URL for the site." }
+        - { label: "Language", name: "language", widget: "string", default: "en", required: true, hint: "Two-letter language code for the site's default language." }
+        - name: "social"
+          label: "Social media accounts"
+          widget: "object"
+          required: false
+          fields:
+            - { label: "Twitter", name: "twitter", widget: "string", required: false }
+            - { label: "Facebook", name: "facebook", widget: "string", required: false }
+            - { label: "Instagram", name: "instagram", widget: "string", required: false }
+            - { label: "Reddit", name: "reddit", widget: "string", required: false }
+            - { label: "GitHub", name: "github", widget: "string", required: false }
+            - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
