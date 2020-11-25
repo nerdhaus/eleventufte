@@ -1,6 +1,6 @@
 # Eleventufte
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3ff3300b-a127-49a9-bdfd-1833a76e4ea9/deploy-status)](https://app.netlify.com/sites/eleventufte/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3ff3300b-a127-49a9-bdfd-1833a76e4ea9/deploy-status)](https://eleventufte.netlify.app)
 
 Years back, a team of dedicated obsessives created [tufte-css](https://github.com/edwardtufte/tufte-css), CSS library and Webfont package meant to duplicate the look and feel of [Edward Tufte's much-loved books](https://www.edwardtufte.com/tufte/). The related [tufte-markdown](https://github.com/luhmann/tufte-markdown) project was created to parse (mostly) standard Markdown into the idiosyncratic markup needed to make Tufte's styling sing.
 
