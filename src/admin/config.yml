@@ -23,9 +23,9 @@ collections:
     sortable_fields: ["permalink", "title", "commit_date"]
     fields:
       - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Subtitle", name: "subtitle", widget: "string", required: false, pattern: ['.{0,160}', "160 characters max"], hint: "Optional 160-char text used in listings and meta tags." }
       - { label: "Permalink", name: "permalink", widget: "string", required: true }
       - { label: "Hide from lists", name: "eleventyExcludeFromCollections", widget: "boolean", default: false, required: false }
-      - { label: "Description", name: "description", widget: "string", required: false, pattern: ['.{0,160}', "160 characters max"], hint: "Optional 160-char text used in listings and meta tags." }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "posts"
@@ -34,7 +34,7 @@ collections:
     summary: "{{title}} — {{published}}"
     format: "frontmatter"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    folder: "src/chats"
+    folder: "src/posts"
     create: true
     sortable_fields: ["title", "date", "author"]
     view_groups:
@@ -43,7 +43,7 @@ collections:
         pattern: \d{4}
     fields:
       - { label: "Title", name: "title", widget: "string", required: true, pattern: ['.{0,60}', "60 characters max"], hint: "60 character limit; used in meta tags."  }
-      - { label: "Description", name: "description", widget: "string", required: false, pattern: ['.{0,160}', "160 characters max"], hint: "Optional 160-char text used in listings and meta tags." }
+      - { label: "Subtitle", name: "subtitle", widget: "string", required: false, pattern: ['.{0,160}', "160 characters max"], hint: "Optional 160-char text used in listings and meta tags." }
       - { label: "Date published", name: "date", widget: "date", format: "YYYY-MM-DD", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
