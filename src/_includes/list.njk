@@ -1,0 +1,18 @@
+{% macro titles(items) %}
+<ul>
+{%- for item in items %}
+  <li><a href="{{ item.url | url }}">{{ item.data.title | markdownInline | safe }}</a></li>
+{%- endfor %}
+</ul>
+{% endmacro %}
+
+{% macro details(items) %}
+<ul>
+{%- for item in items %}
+  <li>
+  <a href="{{ item.url | url }}">{{ item.data.title | markdownInline | safe }}</a> — <small>{{ item.date.toDateString() }}</small>
+  {%- if item.data.subtitle -%}<br/>{{ item.data.subtitle | markdownInline | safe }}{% endif -%}
+  </li>
+{%- endfor %}
+</ul>
+{% endmacro %}
