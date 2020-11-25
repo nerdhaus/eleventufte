@@ -1,7 +1,17 @@
 # Eleventufte
 
-Years back, a team of dedicated obsessives created [tufte-css](https://github.com/edwardtufte/tufte-css), CSS library and Webfont package meant to duplicate the look and feel of Edward Tufte's much-loved books. The related [tufte-markdown](https://github.com/luhmann/tufte-markdown) project, in turn, was created to parse (mostly) standard Markdown into the idiosyncratic markup needed to make Tufte's styling sing.
+Years back, a team of dedicated obsessives created [tufte-css](https://github.com/edwardtufte/tufte-css), CSS library and Webfont package meant to duplicate the look and feel of [Edward Tufte's much-loved books](https://www.edwardtufte.com/tufte/). The related [tufte-markdown](https://github.com/luhmann/tufte-markdown) project was created to parse (mostly) standard Markdown into the idiosyncratic markup needed to make Tufte's styling sing.
 
-Which brings us to [Eleventy](https://11ty.dev), a slick static site generator that's lightweight and customizable where others are crunky and set in their ways. By swapping `tufte-markdown` for Eleventy's default markdown parser and slapping the `tufte-css` styles into a (fairly) vanilla setup, we can stand up a Tufte-like blogging experience in no time flat.
+Which brings us to [Eleventy](https://11ty.dev), the lightweight and customizable static site generator. By swapping in `tufte-markdown` for Eleventy's default markdown parser and slapping the `tufte-css` styles into a (fairly) vanilla setup, Elventufte offers a Tufte-like blogging experience in no time flat.
+
+In exchange for some sensible (if slightly prescriptive) restrictions on page structure (always wrap the content in an `<article>` tag, only use `H2` tags for post sections, etc), Tufte-flavored markdown also gives us some cool features like margin notes instead of footnotes and sensible image captions.
+
+Out of the box, Eleventufte provides a simple home page, colophon and contact pages, individual post pages, an archive of posts by year, and a few feeds for syndication. While this project is less than ideal for a fancy, feature-rich blog, it's a nice place to start if you want to crank out a lot of text with footnotes, figures, and a sensible content hierarchy.
+
+## Future Plans
+
+- [ ] Site search with [Lunr](https://lunrjs.com)
+- [ ] Use [eleventy-charts](https://github.com/idris-maps/eleventy-charts#readme) for visualization, the most Tufte of features
+- [ ] 
 
 Give it a shot, nerds.

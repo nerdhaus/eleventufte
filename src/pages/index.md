@@ -1,17 +1,11 @@
 ---
-title: Eleventufte _Extreme_
+title: Eleventufte
 subtitle: A Tufte-flavored starter kit for the Eleventy static site generator
 permalink: "/"
 ---
 
-Edward Tufte uses a distinctive style in his handouts: simple, with well-set typography,
-extensive sidenotes, and tight integration of graphics and charts. `tufte-css` brings
-that style to HTML documents.
+[^{-} Who wants marginalia? You want marginalia. Admit it.]
 
-Eleventy is a static site generator built for speed and simplicity: it assumes very
-little, and what default behaviors it does have can be swapped out easily. For example,
-substituting a Tufte-flavored markdown parser for the default…
+A quick-start template that combines the front-end styling of [tufte-css](https://github.com/edwardtufte/tufte-css), the custom parser of [tufte-markdown](https://github.com/luhmann/tufte-markdown), and the flexibility of [Eleventy](https://11ty.dev) in the style of [Edward Tufte's much-loved books](https://www.edwardtufte.com/tufte/).
 
-- This is a bullet.
-- This is another?
-- And then one more.
+The [Features page](features/) gives a more thorough run-down of the Markdown enhancements it offers. If you're interested in cloning and using it yourself, [head on over to Github](https://github.com/nerdhaus/eleventufte/generate)…
