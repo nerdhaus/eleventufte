@@ -94,4 +94,3 @@ collections:
             - { label: "Reddit", name: "reddit", widget: "string", required: false }
             - { label: "GitHub", name: "github", widget: "string", required: false }
             - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
-            - { label: "Email", name: "email", widget: "string", required: false }
