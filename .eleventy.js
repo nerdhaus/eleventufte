@@ -1,12 +1,15 @@
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginNavigation = require('@11ty/eleventy-navigation')
 const tufteWrapper = require('./util/tufteWrapper')
+const linkToHead = require("./util/linkToHead");
 
 module.exports = function (eleventyConfig) {
 		// Plugins
 		eleventyConfig.addPlugin(pluginRss)
 		eleventyConfig.addPlugin(pluginNavigation)
-			
+
+    eleventyConfig.addFilter("linkToHead", linkToHead);
+
 		// Asset Watch Targets
 		eleventyConfig.addWatchTarget('./src/assets')
 
