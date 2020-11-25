@@ -1,0 +1,15 @@
+.fab, .fas {
+  font-family: fontawesome !important;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #666;
+}
+
+.fab:hover, .fas:hover {
+  color: #111;
+}
+
+.social-links a:link {
+  background: none;
+  background-repeat: no-repeat;
+}

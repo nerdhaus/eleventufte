@@ -1,10 +1,16 @@
 {
   "title" : "Eleventufte",
-  "description": "An Edward Tufte flavored blogging template for Eleventy",
+  "subtitle": "An Edward Tufte flavored blogging template for Eleventy",
   "url": "https://eleventufte.netlify.app",
+  "feedUrl": "/feed.xml",
   "lang": "en",
+  "author": {
+    "name": "Jeff Eaton",
+    "email": "jeff@eaton.fyi"
+  },
   "social": {
-    "twitter": "http://twitter.com/nerdhaus",
-    "github": "https://github.com/nerdhaus"
+    "twitter": "http://twitter.com/eaton",
+    "github": "https://github.com/nerdhaus/eleventufte",
+    "linkedin": "https://linkedin.com/in/jeffeaton"
   }
 }

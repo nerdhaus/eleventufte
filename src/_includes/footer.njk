@@ -1,0 +1,14 @@
+<footer class="sans">
+  <p class="social-links">
+    <a href="/"><span class="fas fa-home"></span></a>
+    {% if meta.social.twitter %}<a href="{{ meta.social.twitter }}"><span class="fas fa-twitter-square"></span></a>{% endif %}
+    {% if meta.social.facebook %}<a href="{{ meta.social.facebook }}"><span class="fab fa-facebook-square"></span></a>{% endif %}
+    {% if meta.social.instagram %}<a href="{{ meta.social.instagram }}"><span class="fab fa-instagram"></span></a>{% endif %}
+    {% if meta.social.pinterest %}<a href="{{ meta.social.pinterest }}"><span class="fab fa-pinterest"></span></a>{% endif %}
+    {% if meta.social.github %}<a href="{{ meta.social.github }}"><span class="fab fa-github-square"></span></a>{% endif %}
+    {% if meta.social.reddit %}<a href="{{ meta.social.reddit }}"><span class="fab fa-reddit-square"></span></a>{% endif %}
+    {% if meta.social.linkedin %}<a href="{{ meta.social.linkedin }}"><span class="fab fa-linkedin-square"></span></a>{% endif %}
+    {% if meta.author.email %}<a href="mailto:{{ meta.author.email }}"><span class="fab fa-envelope-square"></span></a>{% endif %}
+    {% if meta.feedUrl %}<a href="{{ meta.feedUrl }}"><span class="fas fa-rss-square"></span></a>{% endif %}
+  </p>
+</footer>

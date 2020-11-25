@@ -9,5 +9,6 @@
 		{% if subtitle %}<p class="subtitle">{{ subtitle | markdownInline | safe }}</p>{% endif %}
 				{{ content | safe }}
 		</article>
+		{% include "footer.njk" %}
   </body>
 </html>

@@ -26,6 +26,20 @@ collections:
       - { label: "Subtitle", name: "subtitle", widget: "string", required: false, pattern: ['.{0,160}', "160 characters max"], hint: "Optional 160-char text used in listings and meta tags." }
       - { label: "Permalink", name: "permalink", widget: "string", required: true }
       - { label: "Hide from lists", name: "eleventyExcludeFromCollections", widget: "boolean", default: false, required: false }
+      - label: "Attachments"
+        label_singular: "Attachment"
+        name: "attachments"
+        widget: "list"
+        minimize_collapsed: true
+        hint: "CSS and JS files will be linked in the page's head tag."
+        field: { label: "Files", name: "files", widget: "file", allow_multiple: false}
+      - label: "External Libraries"
+        label_singular: "External Library"
+        name: "libraries"
+        widget: "list"
+        minimize_collapsed: true
+        hint: "Links ending with .css or .js will be linked in the page's head tag."
+        field: { label: "Files", name: "files", widget: "string"}
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "posts"
@@ -58,9 +72,16 @@ collections:
         file: "src/_data/meta.json"
         fields:
         - { label: "Site name", name: "title", widget: "string", required: true, pattern: ['.{0,60}', "60 characters max"], hint: "60 character limit; used in site meta tags."  }
-        - { label: "Description", name: "description", widget: "string", required: false, pattern: ['.{0,160}', "160 characters max"], hint: "Optional 160-char text used in site meta tags." }
+        - { label: "Subtitle", name: "subtitle", widget: "string", required: false, pattern: ['.{0,160}', "160 characters max"], hint: "Optional 160-char text used in site meta tags." }
         - { label: "Site URL", name: "url", widget: "string", required: true, hint: "Live URL for the site." }
         - { label: "Language", name: "language", widget: "string", default: "en", required: true, hint: "Two-letter language code for the site's default language." }
+        - name: "author"
+          label: "Author information"
+          widget: "object"
+          required: false
+          fields:
+            - { label: "Name", name: "name", widget: "string", required: false }
+            - { label: "Email", name: "email", widget: "string", required: false }
         - name: "social"
           label: "Social media accounts"
           widget: "object"
@@ -69,6 +90,8 @@ collections:
             - { label: "Twitter", name: "twitter", widget: "string", required: false }
             - { label: "Facebook", name: "facebook", widget: "string", required: false }
             - { label: "Instagram", name: "instagram", widget: "string", required: false }
+            - { label: "Pinterest", name: "pinterest", widget: "string", required: false }
             - { label: "Reddit", name: "reddit", widget: "string", required: false }
             - { label: "GitHub", name: "github", widget: "string", required: false }
             - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+            - { label: "Email", name: "email", widget: "string", required: false }
