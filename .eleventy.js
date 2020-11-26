@@ -1,6 +1,7 @@
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginNavigation = require('@11ty/eleventy-navigation')
 const tufteWrapper = require('./util/tufteWrapper')
+const searchFilter = require("./util/searchFilter");
 const linkToHead = require("./util/linkToHead");
 
 module.exports = function (eleventyConfig) {
@@ -8,6 +9,7 @@ module.exports = function (eleventyConfig) {
 		eleventyConfig.addPlugin(pluginRss)
 		eleventyConfig.addPlugin(pluginNavigation)
 
+    eleventyConfig.addFilter("search", searchFilter);
     eleventyConfig.addFilter("linkToHead", linkToHead);
 
 		// Asset Watch Targets

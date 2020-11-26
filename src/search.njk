@@ -1,0 +1,20 @@
+---
+title: Search the site
+subtitle: You just might find something interesting…
+layout: simple
+permalink: "/search/"
+eleventyExcludeFromCollections: true
+---
+<div class="field sans">
+	<label for="searchField">Search</label>
+	<input type="search" placeholder="Search..." id="searchField" />
+</div>
+<section>
+	<ol id="searchResults" />
+</section>
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"
+></script>
+<script type="text/javascript" src="/assets/search.js"></script>
