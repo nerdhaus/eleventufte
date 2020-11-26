@@ -39,7 +39,8 @@ Blockquotes are handled as one would expect:
 
 > I love quotations because it is a joy to find thoughts one might have, beautifully expressed with much authority by someone recognized wiser than oneself. —Marlene Dietrich
 
-[^marlene]: {-} ![Image of Marlene Dietrich](https://placeimg.com/400/200/people/sepia) Dietrich as Monica Teasdale in _No Highway in the Sky_ (1951). Not really.
+[^marlene]: {-} ![Image of Marlene Dietrich](https://placeimg.com/400/200/people/sepia)
+  Dietrich as Monica Teasdale in _No Highway in the Sky_ (1951). Not really.
 
 Epigraphs, however, are a slightly different treatment common in Tufte's chapter openings. They provide a bit of extra styling for the attribution line.
 
@@ -67,7 +68,7 @@ Combining an inline sidenote and an image produces a pretty fancy image-with-cap
 Finally, full-width figures are possible by wrapping an image in the `<figure class="fullwidth">` tag. Which brings us back to the whole "why not map that to some sensible markdown patterns" issue again, but we'll revisit it sometime later.
 
 <figure class="fullwidth">
-!\\\[At long last, another image with alt text.](https://placeimg.com/1200/600/tech/grayscale)
+![At long last, another image with alt text.](https://placeimg.com/1200/600/tech/grayscale)
 </figure>
 
 ## The Boring Bits
@@ -84,10 +85,11 @@ Things like HTML lists and tables aren't quite as thrilling, but here you go.
 
 Even tables are possible, though it's a monstrous idea no one should ever really subject themselves to. In the future I'd like to support shortcodes that pipe in an attached `.csv` file instead; seems a bit more humane.
 
-| Column 1      | Column 2     | Column 3  |     |
-| ------------- | ------------ | --------- | --- |
-| Cell Contents | More Stuff   | And Again |     |
-| You Can Also  | Put Pipes In | Like this |     |
+| Column 1      | Column 2     | Column 3  |
+| ------------- | ------------ | --------- |
+| Cell Contents | More Stuff   | And Again |
+| Cell Contents | More Stuff   | And Again |
+
 
 ## Last thoughts
 
