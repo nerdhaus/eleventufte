@@ -10,9 +10,12 @@ eleventyExcludeFromCollections: true
 	<input type="search" placeholder="Search..." id="searchField" />
 </div>
 <section>
-	<ol id="searchResults" />
+	<ol id="searchResults"></ol>
+	<div id="noResultsFound" style="display: none">
+		<p>No results found.</p>
+	</div>
 </section>
-
+ 
 <script
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"

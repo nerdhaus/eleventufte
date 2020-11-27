@@ -1,7 +1,8 @@
 <footer>
   <p class="social-links">
-    <a href="/search"><span class="fas fa-search"></span></a>
     <a href="/"><span class="fas fa-home"></span></a>
+    {% if meta.social or meta.author.email %}
+    &nbsp
     {% if meta.social.twitter %}<a href="{{ meta.social.twitter }}"><span class="fas fa-twitter-square"></span></a>{% endif %}
     {% if meta.social.facebook %}<a href="{{ meta.social.facebook }}"><span class="fab fa-facebook-square"></span></a>{% endif %}
     {% if meta.social.instagram %}<a href="{{ meta.social.instagram }}"><span class="fab fa-instagram"></span></a>{% endif %}
@@ -11,5 +12,8 @@
     {% if meta.social.linkedin %}<a href="{{ meta.social.linkedin }}"><span class="fab fa-linkedin-square"></span></a>{% endif %}
     {% if meta.author.email %}<a href="mailto:{{ meta.author.email }}"><span class="fab fa-envelope-square"></span></a>{% endif %}
     {% if meta.feedUrl %}<a href="{{ meta.feedUrl }}"><span class="fas fa-rss-square"></span></a>{% endif %}
+    &nbsp
+    {% endif %}
+    <a href="/search"><span class="fas fa-search"></span></a>
   </p>
 </footer>
