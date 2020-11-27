@@ -12,7 +12,6 @@ Out of the box, Eleventufte provides a simple home page, colophon and contact pa
 
 ## Future Plans
 
-- [ ] Site search with [Lunr](https://lunrjs.com)
 - [ ] Use [eleventy-charts](https://github.com/idris-maps/eleventy-charts#readme) for visualization, the most Tufte of features
 - [ ] Cleaner handling of attributed quotes and figures, with less manual HTML.
 
